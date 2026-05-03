@@ -66,3 +66,8 @@ date,bank,currency_code,buy_rate,sell_rate
 2026-05-03,Commercial Bank,INR,3.23,3.51
 2026-05-03,Commercial Bank,CAD,230.41,236.87
 2026-05-03,Commercial Bank,NZD,182.86,189.84
+2026-05-03,Amana Bank,USD,316.5,322.5
+2026-05-03,Amana Bank,EUR,368.77,378.51
+2026-05-03,Amana Bank,GBP,426.86,435.92
+2026-05-03,Amana Bank,JPY,1.98,2.0301
+2026-05-03,Amana Bank,CAD,231.51,236.16

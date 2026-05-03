@@ -3,9 +3,11 @@
 import pandas as pd
 
 CURRENCY_ALIASES = {
+    "US DOLLAR": "USD",
     "US DOLLARS": "USD",
     "USD": "USD",
     "EURO": "EUR",
+    "STERLING POUND": "GBP",
     "STERLING POUNDS": "GBP",
     "GBP": "GBP",
     "JAPANESE YEN": "JPY",

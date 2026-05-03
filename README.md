@@ -38,6 +38,13 @@ This file is automatically updated every morning at **09:30 AM SL Time**. You ca
 | **Bank of Ceylon (BOC)** | ✅ Operational | Daily |
 | **Sampath Bank** | ✅ Operational | Daily |
 | **Commercial Bank** | ✅ Operational | Daily |
+| **People's Bank** | ✅ Operational | Daily |
+| **Amana Bank** | ✅ Operational | Daily |
+| **HNB** | 📅 Roadmap | - |
+| **Seylan Bank** | 📅 Roadmap | - |
+| **NDB Bank** | 📅 Roadmap | - |
+| **DFCC Bank** | 📅 Roadmap | - |
+| **Pan Asia Bank** | 📅 Roadmap | - |
 
 ---
 
