@@ -21,29 +21,45 @@ def fetch_nations_trust_rates() -> pd.DataFrame:
     if not tds:
         raise RuntimeError("NTB: no <td> found")
 
-    # Detect tokens that look like currency codes (3–4 uppercase letters)
-    pattern = re.compile(r"^[A-Z]{3,4}$")
+    # Detect tokens that look like currency codes (3 uppercase letters)
+    pattern = re.compile(r"^[A-Z]{3}$")
     today = datetime.now(UTC).date().isoformat()
     rows = []
 
-    buffer = []
+    current_currency = None
+    nums_buffer = []
+
     for token in tds:
-        buffer.append(token)
         if pattern.match(token):
-            # currency code reached → previous numeric values belong to it
-            nums = [v for v in buffer[:-1] if re.match(r"^\d+(\.\d+)?$", v)]
-            if len(nums) >= 2:
-                buy_rate, sell_rate = float(nums[0]), float(nums[1])
+            # If we already have a currency in progress, save it
+            if current_currency and len(nums_buffer) >= 2:
                 rows.append({
                     "date": today,
                     "bank": "Nations Trust Bank",
-                    "currency_code": token,
-                    "buy_rate": buy_rate,
-                    "sell_rate": sell_rate
+                    "currency_code": current_currency,
+                    "buy_rate": float(nums_buffer[0]),
+                    "sell_rate": float(nums_buffer[1])
                 })
-            buffer.clear()
+            
+            # Start new currency
+            current_currency = token
+            nums_buffer = []
+        else:
+            # If it's a number, add to buffer
+            if re.match(r"^\d+(\.\d+)?$", token):
+                nums_buffer.append(token)
+
+    # Don't forget the last currency
+    if current_currency and len(nums_buffer) >= 2:
+        rows.append({
+            "date": today,
+            "bank": "Nations Trust Bank",
+            "currency_code": current_currency,
+            "buy_rate": float(nums_buffer[0]),
+            "sell_rate": float(nums_buffer[1])
+        })
 
     df = pd.DataFrame(rows)
     if df.empty:
-        raise RuntimeError("NTB: parsed no valid rows — table format changed again.")
+        raise RuntimeError("NTB: parsed no valid rows — table format changed.")
     return df
