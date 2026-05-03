@@ -4,6 +4,7 @@ import pandas as pd
 from loguru import logger
 from scrapers.nations_trust import fetch_nations_trust_rates
 from scrapers.boc import fetch_boc_rates
+from scrapers.sampath import fetch_sampath_bank_rates
 from utils.normalization import normalize_currency_aliases
 from utils.validation import validate_scraped_data
 
@@ -18,7 +19,8 @@ def run_all_scrapers(dry_run=False):
     
     registry = [
         ("Nations Trust Bank", fetch_nations_trust_rates),
-        ("Bank of Ceylon", fetch_boc_rates)
+        ("Bank of Ceylon", fetch_boc_rates),
+        ("Sampath Bank", fetch_sampath_bank_rates)
     ]
     
     for bank_name, scraper_func in registry:

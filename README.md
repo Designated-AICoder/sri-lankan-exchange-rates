@@ -36,7 +36,7 @@ This file is automatically updated every morning at **09:30 AM SL Time**. You ca
 | :--- | :--- | :--- |
 | **Nations Trust Bank (NTB)** | ✅ Operational | Daily |
 | **Bank of Ceylon (BOC)** | ✅ Operational | Daily |
-| **Sampath Bank** | 🚧 In Progress | - |
+| **Sampath Bank** | ✅ Operational | Daily |
 | **Commercial Bank** | 🚧 In Progress | - |
 
 ---
