@@ -35,7 +35,7 @@ This file is automatically updated every morning at **09:30 AM SL Time**. You ca
 | Bank | Status | Last Checked |
 | :--- | :--- | :--- |
 | **Nations Trust Bank (NTB)** | ✅ Operational | Daily |
-| **Bank of Ceylon (BOC)** | 🚧 In Progress | - |
+| **Bank of Ceylon (BOC)** | ✅ Operational | Daily |
 | **Sampath Bank** | 🚧 In Progress | - |
 | **Commercial Bank** | 🚧 In Progress | - |
 
@@ -79,8 +79,15 @@ pytest
 
 ---
 
-## 🤝 Contributing
-We are looking for contributors to help build scrapers for more banks! If you are interested in helping the Sri Lankan trading community, please check out our `scrapers/` folder for implementation examples.
+## 🤝 Contributing & Feature Development
+We believe in open transparency and community-driven development. Beyond adding new bank scrapers, we welcome **Merge Requests (MRs)** and **Issues** for any features you believe would make this tool more useful for the Sri Lankan community:
+
+- **Analysis Tools**: Functions to identify the "Best Rate of the Day."
+- **API Development**: Exposing the data via a lightweight FastAPI or Flask wrapper.
+- **Frontend Dashboards**: Building a visual comparison table for traders.
+- **Notification Systems**: Alerting users via Telegram/WhatsApp when rates hit a certain threshold.
+
+If you have an idea that can help Sri Lankans manage their money better, open an issue or submit a feature development request!
 
 ---
 
