@@ -4,5 +4,5 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
-data/*.csv
-!data/.gitkeep
+# Track the master data file
+!data/fxrates_master.csv

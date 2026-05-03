@@ -17,8 +17,17 @@ This project aims to be the **Single Source of Truth** for Sri Lankan Foreign Ex
 ## 🚀 Key Features
 - **Multi-Bank Intelligence**: Unified logic to scrape diverse bank structures.
 - **Data Normalization**: We handle the mess. Whether a bank calls it "US DOLLAR" or "USD", it's standardized here.
-- **Historical Tracking**: Automated daily snapshots to track rate trends over time.
+- **Automated Database**: Runs daily via GitHub Actions; no manual execution required.
+- **Data History**: View the entire history of rates in the `data/fxrates_master.csv` file.
 - **Developer First**: Clean CSV outputs and Docker support for easy integration into your own apps.
+
+---
+
+## 📊 Data Access
+The "database" for this project is stored as a flat-file CSV:
+📍 **[data/fxrates_master.csv](file:///Users/rithikahettiarachchi/Documents/Projects/sriLankaFXRates/sri-lankan-exchange-rates/data/fxrates_master.csv)**
+
+This file is automatically updated every morning at **09:30 AM SL Time**. You can pull this repo at any time to get the latest historical data.
 
 ---
 
